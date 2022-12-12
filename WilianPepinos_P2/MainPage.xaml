@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WilianPepinos_P2.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+
+
+            <Label
+                Text="Ingrese el nùmero de teléfono"
+                SemanticProperties.HeadingLevel="Level1" BackgroundColor="Aquamarine"
+                FontSize="20"
+                HorizontalOptions="Start" />
+
+
+
+            <Entry x:Name="entry"
+                   MaxLength="10"
+                   HorizontalOptions="Start"
+                   WidthRequest="500"/>
+
+
+
+
+
+        
+                <BoxView x:Name="boxView" Color="White"/>
+                
+                    <Picker x:Name="picker"
+                            Title="Seleccione el operador a recargar: ">
+                 
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>CNT</x:String>
+                                <x:String>Maxiplus</x:String>
+                                <x:String>Claro</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+
+
+
+               
+                <StackLayout >
+                    <Label Text="Seleccione el valor a recargar" />
+                    <RadioButton Content="3" />
+                    <RadioButton Content="5" />
+                    <RadioButton Content="10"
+                 IsChecked="true" />
+                </StackLayout>
+            
+
+
+
+
+            <Label x:Name="Verificacion"
+                Text="Has seleccionado el valor de: "
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Recargar"
+                Clicked="OnAlertYesNoClicked"
+                HorizontalOptions="Center" />
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
